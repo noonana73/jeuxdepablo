@@ -1,6 +1,6 @@
 <script src="processing.js"></script>
 <script type="text/processing" data-processing-target="mycanvas">
-final int nombre_de_boule = 500;
+final int nombre_de_boule = 100;
 int[][] boule = new int[nombre_de_boule][5];//1ere case pos en x, 2 en y, 3 diametre, 4  mouvement en x, 5 en y
 int[][] direction_boule = new int[nombre_de_boule][2];//3 = de gauche a droite ou de haut en bas 1 = inverse             1ere case en x, 2eme en y
 color[] boule_color = new color[nombre_de_boule];
@@ -136,7 +136,7 @@ int choix_posY () {
   return int (random(50, height-50));
 }
 int choix_Masse () {
-  return 8
+    return int (random( mass_player / 1.4, mass_player*3));
 }
 int choix_Speed_X() {
   return int ( random ( width/( frameRate * 30), width / (frameRate *8 )));
