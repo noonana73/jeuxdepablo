@@ -35,9 +35,9 @@ void detect_collision() {
     float distance = sqrt(distanceX*distanceX + distanceY*distanceY);
     if (distance < mass_player/2 + boule[i][2]/2) {
       if (mass_player > boule[i][2]) {
-        assigner_les_boules(i);
         mass_player = mass_player + 1;
         color_player = boule_color[i];
+        assigner_les_boules(i);
       } else {
         lose = true;
       }
@@ -107,7 +107,9 @@ void draw() {
     cursor();
     textSize(50);
     fill(80,80,80);
-    text("Game Over Pablo le pgm", width/2-100, height/2-50);
+    text("Game Over", width/2-100, height/2-75);
+    text("Size = " + mass_player,width/2-100, height/2)
+    text("Game made by Pablo",width/2-150,height/2+75)
   }
 }
 
