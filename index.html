@@ -9,6 +9,7 @@ int mass_player = 20;
 color color_player = color(255, 255, 255);
 float distanceX, distanceY;
 boolean lose = false;
+boolean pause = false;
 
 void setup() {
   frameRate(60);
@@ -96,6 +97,7 @@ void dessin_des_boules() {
 }
 
 void draw() {
+  if(pause == false){
   background(0, 0, 0);
   detecter_outside();
   dessin_des_boules();
@@ -112,6 +114,14 @@ void draw() {
     text("Game made by Pablo",width/2-300,height/2+75)
   }
 }
+}
+
+void ketyPressed(){
+  if(key == ' ' && pause == false){
+    pause = true;
+  }if(key == ' ' && pause == true){
+    pause = false;
+  }
 
 void mousePressed() {
   if (lose == true) {
