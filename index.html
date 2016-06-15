@@ -36,7 +36,7 @@ void detect_collision() {
     float distance = sqrt(distanceX*distanceX + distanceY*distanceY);
     if (distance < mass_player/2 + boule[i][2]/2) {
       if (mass_player > boule[i][2]) {
-        mass_player = mass_player + 2;
+        mass_player = mass_player + 1;
         color_player = boule_color[i];
         assigner_les_boules(i);
       } else {
@@ -142,7 +142,7 @@ int choix_posY () {
   return int (random(50, height-50));
 }
 int choix_Masse () {
-    return int ( random (mass_player*0.85,mass_player*3));
+    return int ( random (mass_player*0.85,mass_player*2));
 }
 int choix_Speed_X() {
   return int ( random ( width/( frameRate * 20), width / (frameRate *8 )));
