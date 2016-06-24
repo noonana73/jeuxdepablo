@@ -97,8 +97,12 @@ void dessin_des_boules() {
 }
 
 void draw() {
+  
   if(pause == false){
   background(0, 0, 0);
+  textSize(20);
+    fill(0,120,0);
+  text(mass_player,1100,100);
   detecter_outside();
   dessin_des_boules();
     mouvement_de_la_boule();
