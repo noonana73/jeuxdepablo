@@ -146,7 +146,7 @@ int choix_posY () {
   return int (random(50, height-50));
 }
 int choix_Masse () {
-    return 8;
+    return int ( random (mass_player*0.85,mass_player*1.8));
 }
 int choix_Speed_X() {
   return int ( random ( width/( frameRate * 20), width / (frameRate *8 )));
